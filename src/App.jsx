@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import './App.css'
-import ContainerGral from './components/container/Container'
-
+import TaskList from './components/container/TaskList'
+import { TaskProvider } from './context/TaskContext'
 
 function App() {
   return (
-    <>
-      <ContainerGral />
-    </>
+    <TaskProvider>
+      <TaskList />
+    </TaskProvider>
   )
 }
 
-export default App
+export default App;
