@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import './App.css'
-import TaskList from './components/container/TaskList'
-import { TaskProvider } from './context/TaskContext'
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import TaskList from "./components/container/TaskList";
+import "./App.css";
 
 function App() {
   return (
-    <TaskProvider>
+    <Provider store={store}>
       <TaskList />
-    </TaskProvider>
-  )
+    </Provider>
+  );
 }
 
 export default App;
